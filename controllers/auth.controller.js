@@ -29,6 +29,7 @@ export const login = async (req, res) => {
     //Generar el token JWT
 
     const { token, expiresIn } = generateToken(user.id);
+
     return res.json({ token, expiresIn });
   } catch (error) {
     console.log(error);
